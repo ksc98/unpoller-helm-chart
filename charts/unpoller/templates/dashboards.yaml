@@ -6,13 +6,15 @@ metadata:
   labels:
     {{- include "unpoller.labels" . | nindent 4 }}
 spec:
+  folder: "Unpoller"
+  allowCrossNamespaceImport: true
   instanceSelector:
     matchLabels:
       {{- include "unpoller.dashboadSelectorLabels" . | nindent 6 }}
   url: "https://grafana.com/api/dashboards/11314/revisions/latest/download"
   datasources:
     - inputName: "DS_PROMETHEUS"
-      datasourceName: "Prometheus"
+      datasourceName: "Mimir"
 ---
 apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDashboard
@@ -21,13 +23,15 @@ metadata:
   labels:
     {{- include "unpoller.labels" . | nindent 4 }}
 spec:
+  folder: "Unpoller"
+  allowCrossNamespaceImport: true
   instanceSelector:
     matchLabels:
       {{- include "unpoller.dashboadSelectorLabels" . | nindent 6 }}
   url: "https://grafana.com/api/dashboards/11315/revisions/latest/download"
   datasources:
     - inputName: "DS_PROMETHEUS"
-      datasourceName: "Prometheus"
+      datasourceName: "Mimir"
 ---
 apiVersion: grafana.integreatly.org/v1beta1
 kind: GrafanaDashboard
@@ -36,13 +40,15 @@ metadata:
   labels:
     {{- include "unpoller.labels" . | nindent 4 }}
 spec:
+  folder: "Unpoller"
+  allowCrossNamespaceImport: true
   instanceSelector:
     matchLabels:
       {{- include "unpoller.dashboadSelectorLabels" . | nindent 6 }}
   url: "https://grafana.com/api/dashboards/11312/revisions/latest/download"
   datasources:
     - inputName: "DS_PROMETHEUS"
-      datasourceName: "Prometheus"
+      datasourceName: "Mimir"
 
 ---
 apiVersion: grafana.integreatly.org/v1beta1
@@ -52,13 +58,15 @@ metadata:
   labels:
     {{- include "unpoller.labels" . | nindent 4 }}
 spec:
+  folder: "Unpoller"
+  allowCrossNamespaceImport: true
   instanceSelector:
     matchLabels:
       {{- include "unpoller.dashboadSelectorLabels" . | nindent 6 }}
   url: "https://grafana.com/api/dashboards/11311/revisions/latest/download"
   datasources:
     - inputName: "DS_PROMETHEUS"
-      datasourceName: "Prometheus"
+      datasourceName: "Mimir"
 
 ---
 apiVersion: grafana.integreatly.org/v1beta1
@@ -68,11 +76,13 @@ metadata:
   labels:
     {{- include "unpoller.labels" . | nindent 4 }}
 spec:
+  folder: "Unpoller"
+  allowCrossNamespaceImport: true
   instanceSelector:
     matchLabels:
       {{- include "unpoller.dashboadSelectorLabels" . | nindent 6 }}
   url: "https://grafana.com/api/dashboards/11313/revisions/latest/download"
   datasources:
     - inputName: "DS_PROMETHEUS"
-      datasourceName: "Prometheus"
+      datasourceName: "Mimir"
 {{- end }}
