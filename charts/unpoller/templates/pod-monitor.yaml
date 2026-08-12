@@ -11,4 +11,5 @@ spec:
       {{- include "unpoller.selectorLabels" . | nindent 6 }}
   podMetricsEndpoints:
     - port: tcp
+      path: /metrics
 {{- end }}
